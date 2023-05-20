@@ -6,5 +6,23 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000
+  mariadb:
+    image: docker.io/bitnami/mariadb:10.6
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=user_scs
+      - MARIADB_DATABASE=db_scs
+  myapp:
+    image: docker.io/bitnami/laravel:10
+    ports:
+      - '8000:8000'
+    environment:
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - DB_USERNAME=bn_myapp
+      - DB_DATABASE=bitnami_myapp
     volumes:
-      - /docker/app:/docker/app
+      - '/backend/app:/backend/app'
+    depends_on:
+      - mariadb

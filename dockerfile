@@ -1,6 +1,6 @@
 FROM node:latest
 COPY package*.json /app
-RUN npm install
+RUN /bin/sh -c npm install
 COPY . .
 EXPOSE 3000
 CMD [ "npm", "start" ]
