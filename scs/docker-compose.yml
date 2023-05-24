@@ -1,0 +1,33 @@
+version: '3.1'
+services:
+  react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-ts
+    ports:
+      - "5173:5173"
+    volumes:
+      - './frontend:/frontend'
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123senha
+  phpadmin:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+  myapp:
+    image: docker.io/bitnami/laravel:10
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=localhost
+      - DB_PORT=5432
+      - DB_DATABASE=db
+    volumes:
+      - './backend:/backend'
+    depends_on:
+      - db
