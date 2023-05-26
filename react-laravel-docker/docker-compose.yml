@@ -2,13 +2,13 @@ version: '3.9'
 services:
   react:
     build:
-      context: .
-      dockerfile: dockerfile
-    container_name: react-ts
+      context: ./app-react
+      dockerfile: ./app-react/Dockerfile
+    container_name: react
     ports:
       - "5173:5173"
     volumes:
-      - ./frontend:/frontend
+      - ./app-react:/app
   db:
     image: postgres
     restart: always
@@ -24,10 +24,11 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - DB_DATABASE=db_teste
+      - DB_CONNECTION=postgres
       - DB_HOST=localhost
       - DB_PORT=5432
-      - DB_DATABASE=db
     volumes:
-      - ./backend:/backend
+      - ./app-laravel:/app
     depends_on:
       - db

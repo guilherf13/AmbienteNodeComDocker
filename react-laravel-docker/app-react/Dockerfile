@@ -1,8 +1,8 @@
-FROM node:latest
+FROM node:18-alpine
 WORKDIR /app
 #RUN groupadd -r user && useradd -r -g user user
 #USER user
-COPY /package*.json /
+COPY /package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 5173
