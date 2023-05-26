@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="AmbienteNodeComDocker" />
+  <img src="./.github/app.gif" alt="Ambiente docker com vite-react-ts, laravel e postgres" />
 
   &#xa0;
 
