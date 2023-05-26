@@ -9,19 +9,19 @@
 <h1 align="center">AmbienteNodeComDocker</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{guilherf13}}/ambientenodecomdocker?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{guilherf13}}/ambientenodecomdocker?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{guilherf13}}/ambientenodecomdocker?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/{{guilherf13}}/ambientenodecomdocker?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{guilherf13}}/ambientenodecomdocker?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{guilherf13}}/ambientenodecomdocker?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{guilherf13}}/ambientenodecomdocker?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -50,9 +50,9 @@ Describe your project
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Vite-React-TS;\
+:heavy_check_mark: Laravel-10;\
+:heavy_check_mark: PHPMyadmin;
 
 ## :rocket: Technologies ##
 
@@ -63,6 +63,8 @@ The following tools were used in this project:
 - [React](https://pt-br.reactjs.org/)
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Laravel](https://laravel.com/docs/10.x)
+- [PHPMyadmin](https://www.phpmyadmin.net/)
 
 ## :white_check_mark: Requirements ##
 
@@ -72,7 +74,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker
+$ git clone https://github.com/guilherf13/AmbienteNodeComDocker.git
 
 # Access
 $ cd ambientenodecomdocker
@@ -90,7 +92,7 @@ $ docker-compose up -d
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/{{guilherf13}}" target="_blank">{{guilherf13}}</a>
 
 &#xa0;
 
