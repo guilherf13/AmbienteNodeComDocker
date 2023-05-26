@@ -78,12 +78,11 @@ $ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/ambientenodecomdocker
 $ cd ambientenodecomdocker
 
 # Install dependencies
-$ yarn
+$ docker-compose up -d
 
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
+# The server laravel will initialize in the <http://localhost:8000>
+# The server vite-react-ts initialize in the <http://localhost:5173>
+# The server phpadmin in the <http://localhost:8080>
 ```
 
 ## :memo: License ##
