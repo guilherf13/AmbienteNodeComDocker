@@ -6,7 +6,7 @@
   <!-- <a href="https://ambientenodecomdocker.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">AmbienteNodeComDocker</h1>
+<h1 align="center">Ambiente docker com vite-react-ts, laravel e postgres</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{guilherf13}}/ambientenodecomdocker?color=56BEB8">
