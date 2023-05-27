@@ -4,7 +4,7 @@ services:
     build:
       context: ./app-react
       dockerfile: ./app-react/Dockerfile
-    container_name: react
+    container_name: react-app
     ports:
       - "5173:5173"
     volumes:
@@ -12,22 +12,32 @@ services:
   db:
     image: postgres
     restart: always
+    container_name: postgres
     environment:
-      POSTGRES_PASSWORD: 123senha
-  phpadmin:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db_postegres
+    volumes:
+      - "/dbPostegres/data:/var/lib/postgresql/data"
+    ports:
+      - 5432:5432
+  adminer:
     image: adminer
     restart: always
     ports:
       - "8080:8080"
+    container_name: adminer
   myapp:
     image: docker.io/bitnami/laravel:10
     ports:
       - "8000:8000"
     environment:
-      - DB_DATABASE=db_teste
-      - DB_CONNECTION=postgres
-      - DB_HOST=localhost
-      - DB_PORT=5432
+     - DB_CONNECTION=pgsql
+     - DB_HOST=db
+     - DB_PORT=5432
+     - DB_DATABASE=dbPostegres
+     - DB_USERNAME=postgres
+     - DB_PASSWORD=postgres
+    container_name: laravel-app
     volumes:
       - ./app-laravel:/app
     depends_on:

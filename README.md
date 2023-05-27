@@ -78,6 +78,8 @@ $ git clone https://github.com/guilherf13/AmbienteNodeComDocker.git
 
 # Access
 $ cd ambientenodecomdocker
+$ sudo chmod -R 777 react-laravel-docker
+$ cd react-laravel-docker
 
 # Install dependencies
 $ docker-compose up -d
