@@ -3,7 +3,7 @@ services:
   react:
     build:
       context: ./app-react
-      dockerfile: ./app-react/Dockerfile
+      dockerfile: Dockerfile
     container_name: react
     ports:
       - "5173:5173"
