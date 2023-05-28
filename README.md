@@ -1,12 +1,12 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="AmbienteNodeComDocker" />
+  <img src="./.github/app.gif" alt="Ambiente docker com vite-react-ts, laravel e postgres" />
 
   &#xa0;
 
   <!-- <a href="https://ambientenodecomdocker.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">AmbienteNodeComDocker</h1>
+<h1 align="center">Ambiente docker com vite-react-ts, laravel e postgres</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{guilherf13}}/ambientenodecomdocker?color=56BEB8">
@@ -78,6 +78,8 @@ $ git clone https://github.com/guilherf13/AmbienteNodeComDocker.git
 
 # Access
 $ cd ambientenodecomdocker
+$ sudo chmod -R 777 react-laravel-docker
+$ cd react-laravel-docker
 
 # Install dependencies
 $ docker-compose up -d
