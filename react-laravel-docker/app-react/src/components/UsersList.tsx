@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function UserList() {
-  const [users, setUsers] = useState([]);
+function UsersList() {
+  const [user, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/user')
+    axios.get('http://localhost:8000/user')
       .then(response => {
         setUsers(response.data);
       })
@@ -17,13 +17,9 @@ function UserList() {
   return (
     <div>
       <h1>User List</h1>
-      <ul>
-        {user.map(user => (
-          <li>{user}</li>
-        ))}
-      </ul>
+      <p>{user.name} {user.sobrenome}</p>
     </div>
   );
 }
 
-export default UserList;
+export default UsersList;

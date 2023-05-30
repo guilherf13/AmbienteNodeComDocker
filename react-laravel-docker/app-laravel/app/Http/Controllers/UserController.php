@@ -13,6 +13,7 @@ class UserController extends Controller
             "name"=>"guilherme",
             "sobrenome"=>"silva"
         ];
+
         return response()->json($teste);
     }
 

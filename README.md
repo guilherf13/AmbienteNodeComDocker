@@ -64,7 +64,7 @@ The following tools were used in this project:
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Laravel](https://laravel.com/docs/10.x)
-- [PHPMyadmin](https://www.phpmyadmin.net/)
+- [Adminer](https://www.adminer.org/)
 
 ## :white_check_mark: Requirements ##
 
@@ -78,11 +78,10 @@ $ git clone https://github.com/guilherf13/AmbienteNodeComDocker.git
 
 # Access
 $ cd ambientenodecomdocker
-$ sudo chmod -R 777 react-laravel-docker
 $ cd react-laravel-docker
 
 # Install dependencies
-$ docker-compose up -d
+$ docker-compose up -d --build
 
 # The server laravel will initialize in the <http://localhost:8000>
 # The server vite-react-ts initialize in the <http://localhost:5173>
