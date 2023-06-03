@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     restart: always
     container_name: react-app
+    networks:
+      - backend
     ports:
       - "5173:5173"
     volumes:
@@ -13,12 +15,14 @@ services:
   db:
     image: postgres
     restart: always
-    container_name: postgres
+    container_name: db-postgres
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: db_postegres
     volumes:
       - "/dbPostegres/data:/var/lib/postgresql/data"
+    networks:
+      - backend
     ports:
       - 5432:5432
   adminer:
@@ -26,6 +30,8 @@ services:
     restart: always
     ports:
       - "8080:8080"
+    networks:
+      - backend
     container_name: adminer
   myapp:
     image: docker.io/bitnami/laravel:10
@@ -42,5 +48,10 @@ services:
     container_name: laravel-app
     volumes:
       - ./app-laravel:/app
+    networks:
+      - backend
     depends_on:
       - db
+networks:
+  backend:
+    driver: bridge
