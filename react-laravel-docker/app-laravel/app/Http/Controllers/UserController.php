@@ -10,8 +10,8 @@ class UserController extends Controller
     public function index()
     {
         $teste = [
-            "name"=>"guilherme",
-            "sobrenome"=>"silva"
+            "email"=>"guilhermeccb222@gmail.com",
+            "password"=>"123senhaboa"
         ];
 
         return response()->json($teste);

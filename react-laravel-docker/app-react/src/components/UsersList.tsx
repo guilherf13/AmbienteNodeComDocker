@@ -17,7 +17,7 @@ function UsersList() {
   return (
     <div>
       <h1>Lista de usuarios</h1>
-      <p>{user['name']} {user['sobrenome']}</p>
+      <p>{user['email']} {user['password']}</p>
     </div>
   );
 }
