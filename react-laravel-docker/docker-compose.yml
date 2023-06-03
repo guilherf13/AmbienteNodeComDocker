@@ -33,11 +33,25 @@ services:
     networks:
       - backend
     container_name: adminer
-  myapp:
-    image: docker.io/bitnami/laravel:10
-    restart: always
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
     ports:
-      - "8000:8000"
+      - "8989:80"
+    volumes:
+      - ./:/var/www
+      - ./app-laravel/docker/nginx/:/etc/nginx/conf.d/
+    container_name: nginx
+    networks:
+      - backend
+  myapp:
+    build:
+      context: ./app-laravel
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./app-laravel:/var/www
     environment:
      - DB_CONNECTION=pgsql
      - DB_HOST=db
@@ -46,8 +60,6 @@ services:
      - DB_USERNAME=postgres
      - DB_PASSWORD=postgres
     container_name: laravel-app
-    volumes:
-      - ./app-laravel:/app
     networks:
       - backend
     depends_on:
